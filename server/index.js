@@ -21,7 +21,11 @@ const limiter = rateLimit({
 
 // Middleware
 app.use(cors({
-    origin: process.env.CLIENT_URL || ['http://localhost:5173', 'https://jovial-medovik-0cd3c3.netlify.app'],
+  origin: [
+    "http://localhost:5173",
+    "https://jovial-medovik-0cd3c3.netlify.app",
+    "https://interview-coach-ai-pre.netlify.app"
+  ],
   credentials: true
 }));
 app.use(express.json());
